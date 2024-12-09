@@ -6,7 +6,6 @@ def describe_Brute():
     def cracker():
         return Brute("TDD")
 
-    # Tests for bruteOnce without test doubles
     def describe_bruteOnce():
         def it_succeeds_when_guess_is_correct(cracker):
             assert cracker.bruteOnce("TDD") == True
@@ -14,7 +13,6 @@ def describe_Brute():
         def it_fails_when_guess_is_incorrect(cracker):
             assert cracker.bruteOnce("wrong") == False
 
-    # Tests for bruteMany with test doubles
     def describe_bruteMany():
         def it_succeeds_when_correct_guess_is_made(mocker):
             b = Brute("correct_guess")
